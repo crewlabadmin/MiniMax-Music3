@@ -20,6 +20,12 @@ git submodule update --init skills/higgsfield
 
 Or install the skills directly from upstream with `npx skills add higgsfield-ai/skills`.
 
+[`higgsfield-prompt/`](higgsfield-prompt) is a git submodule pointing at [OSideMedia/higgsfield-ai-prompt-skill](https://github.com/OSideMedia/higgsfield-ai-prompt-skill) (MIT). It is a prompt-writing skill library for Higgsfield's video and image models (camera controls, model selection, genre recipes, Cinema Studio, Seedance), useful for drafting music video prompts. Fetch it with:
+
+```bash
+git submodule update --init skills/higgsfield-prompt
+```
+
 ## Installation
 
 ### Option 1: Install with the `skills` CLI (recommended)
@@ -94,6 +100,7 @@ The genre router maps your genre/mood cues to one of 18 style families (pop & ba
 skills/
 ├── README.md                                  This file
 ├── higgsfield/                                Submodule: higgsfield-ai/skills
+├── higgsfield-prompt/                         Submodule: OSideMedia/higgsfield-ai-prompt-skill
 └── music-caption-rewriter/
     ├── SKILL.md                               Skill instructions
     ├── agents/openai.yaml                     Agent metadata
