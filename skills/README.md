@@ -8,6 +8,18 @@ This directory contains agent skills that extend AI coding agents (Claude Code, 
 |---|---|---|
 | [`music-caption-rewriter`](music-caption-rewriter/SKILL.md) | Turns a brief music description and optional tagged lyrics into a detailed **Music 3.0 Structured Caption** (Global Metadata, Vocal Details, Arrangement) for precise generation control. | `$music-caption-rewriter` |
 
+## Third-Party Skills
+
+[`higgsfield/`](higgsfield) is a git submodule pointing at [higgsfield-ai/skills](https://github.com/higgsfield-ai/skills) (MIT). It provides image, video, audio, brand-kit, and website generation skills that can be paired with Music 3 output — for example, cover art, music video clips, or a release landing page. Unlike `music-caption-rewriter`, these skills call the Higgsfield CLI and require a Higgsfield account; see the upstream [INSTALL.md](https://github.com/higgsfield-ai/skills/blob/main/INSTALL.md).
+
+Fetch it after cloning:
+
+```bash
+git submodule update --init skills/higgsfield
+```
+
+Or install the skills directly from upstream with `npx skills add higgsfield-ai/skills`.
+
 ## Installation
 
 ### Option 1: Install with the `skills` CLI (recommended)
@@ -81,6 +93,7 @@ The genre router maps your genre/mood cues to one of 18 style families (pop & ba
 ```
 skills/
 ├── README.md                                  This file
+├── higgsfield/                                Submodule: higgsfield-ai/skills
 └── music-caption-rewriter/
     ├── SKILL.md                               Skill instructions
     ├── agents/openai.yaml                     Agent metadata

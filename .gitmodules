@@ -1,0 +1,3 @@
+[submodule "skills/higgsfield"]
+	path = skills/higgsfield
+	url = https://github.com/higgsfield-ai/skills.git
